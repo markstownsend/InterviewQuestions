@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2343620C-23E5-4C65-94F7-EC73F70726C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>All.Tests</RootNamespace>
+    <AssemblyName>All.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="AddDigitsTests.cs" />
+    <Compile Include="EquiIndexTests.cs" />
+    <Compile Include="FrogJumpTests.cs" />
+    <Compile Include="GroupAnagramsTests.cs" />
+    <Compile Include="NimTests.cs" />
+    <Compile Include="PathTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunTests.cs" />
+    <Compile Include="StairCaseTests.cs" />
+    <Compile Include="TapeEquilibriumTests.cs" />
+    <Compile Include="TwoSumTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AddDigits\AddDigits.csproj">
+      <Project>{4c1f340f-68b8-423d-a581-3773c983c358}</Project>
+      <Name>AddDigits</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\EquiIndex\EquiIndex.csproj">
+      <Project>{0838a3a8-1804-4d01-871a-c8ac3f232003}</Project>
+      <Name>EquiIndex</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\FrogJump\FrogJump.csproj">
+      <Project>{54331961-53fb-4211-aff1-9e27dc8c2f18}</Project>
+      <Name>FrogJump</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\GroupAnagrams\GroupAnagrams.csproj">
+      <Project>{ecc5fee1-40c7-42c8-9bf0-e2b71bfbb69c}</Project>
+      <Name>GroupAnagrams</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Nim\Nim.csproj">
+      <Project>{09d57b1d-59b3-4bc7-9f72-7f1d3f1f7c88}</Project>
+      <Name>Nim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Path\Path.csproj">
+      <Project>{fac90845-6e59-4f36-a434-3481633b99d6}</Project>
+      <Name>Path</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Run\Run.csproj">
+      <Project>{1ac3f750-ff17-4246-a518-73a0d72d9fa3}</Project>
+      <Name>Run</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\StairCase\StairCase.csproj">
+      <Project>{1ad5a2b9-7435-4cbc-b251-da2172a890db}</Project>
+      <Name>StairCase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\TapeEquilibrium\TapeEquilibrium.csproj">
+      <Project>{55ec07e6-59d1-470d-b2b5-7adb77607e21}</Project>
+      <Name>TapeEquilibrium</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\TwoSum\TwoSum.csproj">
+      <Project>{2f4390ee-95ed-4a3b-8983-3c418d870f15}</Project>
+      <Name>TwoSum</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
